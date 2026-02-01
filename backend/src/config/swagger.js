@@ -1,8 +1,8 @@
 export const swaggerSpec = {
   openapi: '3.0.3',
   info: {
-    title: 'Car Brand Kilometer Tracking API',
-    description: 'API for admins to manage car brands and users to track kilometers per brand.',
+    title: 'Kilometer Tracking API',
+    description: 'Kilometer Tracking API for tracking kilometers per brand.',
     version: '1.0.0',
   },
   servers: [
