@@ -1,67 +1,99 @@
-# 🚗 Car Brand Kilometer Tracking System
+             🚗 CAR BRAND TRACKER SYSTEM 🚗              █
 
-A full-stack web application built with **Node.js, Express, and a frontend framework** that allows **admins** to manage car brands and **users** to track kilometers traveled for those brands.
 
----
+A full-stack system where:
+- 👨‍💼 Admins create and manage car brands
+- 👤 Users select brands and record kilometers traveled
+- 📊 Track usage and history per car brand
 
-## 📌 Features
 
-### 👑 Admin Role
-- Create car brands
-- View all registered brands
-- Manage system data
+------------------------------------------------------------
+🛠 TECH STACK
+------------------------------------------------------------
 
-### 👤 User Role
-- View available car brands created by admin
-- Add kilometers traveled for a selected brand
-- View total kilometers per brand
-
----
-
-## 🏗️ Tech Stack
-
-### Backend
+Backend:
 - Node.js
 - Express.js
 - MongoDB (Mongoose)
 - JWT Authentication
-- Role-Based Access Control (RBAC)
 
-### Frontend
-- React (or any frontend framework)
-- Axios for API requests
-- Role-based UI rendering
+Frontend:
+- React
+- TypeScript
+- Vite
+- Axios
+- Tailwind CSS (optional)
 
----
+------------------------------------------------------------
+🔐 USER ROLES
+------------------------------------------------------------
 
-## 🔐 Authentication & Authorization
+ADMIN:
+- Create car brands
+- View all users
+- Monitor kilometers per brand
 
-- JWT-based authentication
-- Two roles:
-  - `ADMIN`
-  - `USER`
-- Protected routes based on roles
+USER:
+- View available car brands
+- Select a brand
+- Add kilometers traveled
+- View personal travel history
 
----
+------------------------------------------------------------
+⚙️ ENVIRONMENT VARIABLES (Backend)
+------------------------------------------------------------
 
-## 📂 Project Structure
+Create a `.env` file inside `/backend`:
 
-```bash
-car-brand-tracker/
-│
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │   ├── config/
-│   │   └── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-└── README.md
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+
+------------------------------------------------------------
+🚀 GETTING STARTED
+------------------------------------------------------------
+
+1️⃣ Clone the repository:
+git clone https://github.com/Y-elv/car-brand-tracker.git 
+
+2️⃣ Backend setup:
+cd backend
+npm install
+npm run dev
+
+3️⃣ Frontend setup:
+cd ../frontend
+npm install
+npm run dev
+
+------------------------------------------------------------
+📡 API OVERVIEW
+------------------------------------------------------------
+
+POST   /api/auth/register        -> Register user
+POST   /api/auth/login           -> Login user
+POST   /api/brands               -> Create car brand (Admin)
+GET    /api/brands               -> Get all brands
+POST   /api/kilometers           -> Add kilometers (User)
+
+------------------------------------------------------------
+📌 FUTURE IMPROVEMENTS
+------------------------------------------------------------
+
+- Email notifications
+- Admin dashboard analytics
+- Role-based UI guards
+- Deployment with Docker
+- CI/CD pipeline
+
+
+
+------------------------------------------------------------
+⭐ SUPPORT
+------------------------------------------------------------
+
+If you like this project:
+- Star the repository ⭐
+- Fork it 🍴
+- Contribute 🚀
+
